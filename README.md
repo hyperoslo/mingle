@@ -36,6 +36,10 @@ Mingle::Twitter.fetch
 Mingle::Instagram.fetch
 ```
 
+## Jobs
+
+Mingle ships with Sidekiq jobs for your perusal.
+
 ## Configuration
 
 Mingle looks to the following environment variables for its configuration:
