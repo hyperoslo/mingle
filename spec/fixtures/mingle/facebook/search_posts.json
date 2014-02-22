@@ -1,0 +1,119 @@
+{
+  "data": [
+    {
+      "id": "197103030469110_208042732708473",
+      "from": {
+        "category": "Website",
+        "name": "ZXY OLK",
+        "id": "197103030469110"
+      },
+      "message": "Message without KLHD hashtag in it, so should be ignored.",
+      "actions": [
+        {
+          "name": "Comment",
+          "link": "https://www.facebook.com/197103030469110/posts/208042732708473"
+        }
+      ],
+      "privacy": {
+        "value": ""
+      },
+      "type": "status",
+      "application": {
+        "name": "Zurtak",
+        "id": "1422869047929657"
+      },
+      "created_time": "2013-10-30T12:16:36+0000",
+      "updated_time": "2013-10-30T12:16:36+0000"
+    },
+    {
+      "id": "577910407_10153357728425408",
+      "from": {
+        "name": "John-John Myhrvold",
+        "id": "577910407"
+      },
+      "message": "#KLHD",
+      "privacy": {
+        "value": ""
+      },
+      "type": "status",
+      "application": {
+        "name": "Facebook for iPhone",
+        "namespace": "fbiphone",
+        "id": "6628568379"
+      },
+      "created_time": "2013-10-29T09:21:59+0000",
+      "updated_time": "2013-10-29T09:21:59+0000"
+    },
+    {
+      "id": "880440296_10153410989865297",
+      "from": {
+        "name": "Chris-Stian Tjorven Selstad",
+        "id": "880440296"
+      },
+      "message": "#klhd Rema skolen :D",
+      "actions": [
+        {
+          "name": "Comment",
+          "link": "https://www.facebook.com/880440296/posts/10153410989865297"
+        }
+      ],
+      "privacy": {
+        "value": ""
+      },
+      "place": {
+        "id": "171030549607846",
+        "name": "Letohallen",
+        "location": {
+          "street": "Koloniveien",
+          "zip": "",
+          "latitude": 60.250360444128,
+          "longitude": 11.180622556789
+        }
+      },
+      "type": "status",
+      "application": {
+        "name": "Facebook for iPhone",
+        "namespace": "fbiphone",
+        "id": "6628568379"
+      },
+      "created_time": "2013-10-29T09:00:42+0000",
+      "updated_time": "2013-10-29T09:35:51+0000",
+      "likes": {
+        "data": [
+          {
+            "id": "737555370",
+            "name": "Magnus Bodan"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "after": "NzM3NTU1Mzcw",
+            "before": "NzM3NTU1Mzcw"
+          }
+        }
+      },
+      "comments": {
+        "data": [
+          {
+            "id": "10153410989865297_44649107",
+            "from": {
+              "name": "Ole Morten Nyrud",
+              "id": "1493514690"
+            },
+            "message": "Jøss, er du rett borti veien her.....:)",
+            "can_remove": false,
+            "created_time": "2013-10-29T09:35:51+0000",
+            "like_count": 0,
+            "user_likes": false
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "after": "MQ==",
+            "before": "MQ=="
+          }
+        }
+      }
+    }
+  ]
+}

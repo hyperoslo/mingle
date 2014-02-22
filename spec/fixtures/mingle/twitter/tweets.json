@@ -1,0 +1,253 @@
+{
+  "statuses": [
+    {
+      "metadata": {
+        "result_type": "recent",
+        "iso_language_code": "no"
+      },
+      "created_at": "Sat Jun 01 07:45:37 +0000 2013",
+      "id": 340735872293040128,
+      "id_str": "340735872293040128",
+      "text": "Klar for dagens plikter! Ha en fin lørdag :) #Rema1000 http://t.co/npom7ntimr",
+      "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "user": {
+        "id": 280615050,
+        "id_str": "280615050",
+        "name": "Anita Iren Vassli",
+        "screen_name": "anitairenLFC",
+        "location": "Kyrksæterøra",
+        "description": "Trønderjente som helst kler seg i rødt og er veldig svak for Steven Gerrard! Rosenborg og Liverpool - livet mitt!",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": [
+
+            ]
+          }
+        },
+        "protected": false,
+        "followers_count": 224,
+        "friends_count": 214,
+        "listed_count": 2,
+        "created_at": "Mon Apr 11 17:52:21 +0000 2011",
+        "favourites_count": 687,
+        "utc_offset": 3600,
+        "time_zone": "Amsterdam",
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 10870,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "profile_background_color": "1A1B1F",
+        "profile_background_image_url": "http://a0.twimg.com/profile_background_images/667504298/9de1056dd73477c5d69519285b8edd77.jpeg",
+        "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/667504298/9de1056dd73477c5d69519285b8edd77.jpeg",
+        "profile_background_tile": true,
+        "profile_image_url": "http://a0.twimg.com/profile_images/3521212093/20a837ff967f5f1685f00506df7550e5_normal.jpeg",
+        "profile_image_url_https": "https://si0.twimg.com/profile_images/3521212093/20a837ff967f5f1685f00506df7550e5_normal.jpeg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/280615050/1363378975",
+        "profile_link_color": "2FC2EF",
+        "profile_sidebar_border_color": "FFFFFF",
+        "profile_sidebar_fill_color": "252429",
+        "profile_text_color": "666666",
+        "profile_use_background_image": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [
+          {
+            "text": "Rema1000",
+            "indices": [
+              45,
+              54
+            ]
+          }
+        ],
+        "symbols": [
+
+        ],
+        "urls": [
+
+        ],
+        "user_mentions": [
+
+        ],
+        "media": [
+          {
+            "id": 340735872297234433,
+            "id_str": "340735872297234433",
+            "indices": [
+              55,
+              77
+            ],
+            "media_url": "http://pbs.twimg.com/media/BLqJeHaCcAEPMFq.jpg",
+            "media_url_https": "https://pbs.twimg.com/media/BLqJeHaCcAEPMFq.jpg",
+            "url": "http://t.co/npom7ntimr",
+            "display_url": "pic.twitter.com/npom7ntimr",
+            "expanded_url": "http://twitter.com/anitairenLFC/status/340735872293040128/photo/1",
+            "type": "photo",
+            "sizes": {
+              "small": {
+                "w": 340,
+                "h": 382,
+                "resize": "fit"
+              },
+              "thumb": {
+                "w": 150,
+                "h": 150,
+                "resize": "crop"
+              },
+              "large": {
+                "w": 911,
+                "h": 1024,
+                "resize": "fit"
+              },
+              "medium": {
+                "w": 600,
+                "h": 674,
+                "resize": "fit"
+              }
+            }
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "possibly_sensitive": false,
+      "lang": "no"
+    },
+    {
+      "metadata": {
+        "result_type": "recent",
+        "iso_language_code": "no"
+      },
+      "created_at": "Sat Jun 01 07:33:40 +0000 2013",
+      "id": 340732867342651392,
+      "id_str": "340732867342651392",
+      "text": "Av erfaring er det en ting som er sikkert!! #kiwi selger frukt som er umoden eller for gammel. #rema1000 har moden og god frukt! #dagligvare",
+      "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "user": {
+        "id": 87887606,
+        "id_str": "87887606",
+        "name": "Hans Fredrik",
+        "screen_name": "Hbjorg",
+        "location": "Norway ",
+        "description": "Life, music, travel!",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": [
+
+            ]
+          }
+        },
+        "protected": false,
+        "followers_count": 14,
+        "friends_count": 18,
+        "listed_count": 0,
+        "created_at": "Fri Nov 06 07:08:28 +0000 2009",
+        "favourites_count": 4,
+        "utc_offset": 3600,
+        "time_zone": "Berlin",
+        "geo_enabled": true,
+        "verified": false,
+        "statuses_count": 443,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "profile_background_color": "00AAFF",
+        "profile_background_image_url": "http://a0.twimg.com/profile_background_images/567117896/qpqj0ahmkia1ehieve33.jpeg",
+        "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/567117896/qpqj0ahmkia1ehieve33.jpeg",
+        "profile_background_tile": false,
+        "profile_image_url": "http://a0.twimg.com/profile_images/1364414120/Profil_twitter_normal.jpg",
+        "profile_image_url_https": "https://si0.twimg.com/profile_images/1364414120/Profil_twitter_normal.jpg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/87887606/1366322320",
+        "profile_link_color": "000000",
+        "profile_sidebar_border_color": "EEEEEE",
+        "profile_sidebar_fill_color": "EFEFEF",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [
+          {
+            "text": "kiwi",
+            "indices": [
+              44,
+              49
+            ]
+          },
+          {
+            "text": "rema1000",
+            "indices": [
+              95,
+              104
+            ]
+          },
+          {
+            "text": "dagligvare",
+            "indices": [
+              129,
+              140
+            ]
+          }
+        ],
+        "symbols": [
+
+        ],
+        "urls": [
+
+        ],
+        "user_mentions": [
+
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "no"
+    }
+  ],
+  "search_metadata": {
+    "completed_in": 0.025,
+    "max_id": 340735872293040128,
+    "max_id_str": "340735872293040128",
+    "query": "%23rema1000",
+    "refresh_url": "?since_id=340735872293040128&q=%23rema1000&include_entities=1",
+    "count": 15,
+    "since_id": 0,
+    "since_id_str": "0"
+  }
+}

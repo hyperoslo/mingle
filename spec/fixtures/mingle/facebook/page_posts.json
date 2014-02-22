@@ -1,0 +1,133 @@
+{
+   "data": [
+      {
+         "id": "133713366690788_541643492564438",
+         "from": {
+            "id": "133713366690788",
+            "category": "Company",
+            "name": "Ole Robert Reitan, REMA 1000"
+         },
+         "message": "Denne uken sitter nye REMA 1000-kj\u00f8pmenn i Gladengveien p\u00e5 skolebenken i Gladengveien, her seks av dem. N\u00e5 st\u00e5r en god \u00f8kt med REMA-filosofi og -kultur p\u00e5 programmet.",
+         "picture": "http://photos-e.ak.fbcdn.net/hphotos-ak-frc3/312138_541643485897772_481929988_s.jpg",
+         "link": "https://www.facebook.com/photo.php?fbid=541643485897772&set=a.133719816690143.26618.133713366690788&type=1&relevant_count=1",
+         "icon": "http://static.ak.fbcdn.net/rsrc.php/v2/yz/r/StEh3RhPvjk.gif",
+         "privacy": {
+            "value": ""
+         },
+         "type": "photo",
+         "status_type": "added_photos",
+         "object_id": "541643485897772",
+         "created_time": "2013-05-29T08:01:00+0000",
+         "updated_time": "2013-05-29T08:01:00+0000",
+         "likes": {
+            "data": [
+               {
+                  "name": "Kathrine Dorothea von Tangen",
+                  "id": "734960483"
+               },
+               {
+                  "name": "Vivian Roska",
+                  "id": "1643327041"
+               },
+               {
+                  "name": "Anders Fjeldstad",
+                  "id": "100004715856459"
+               },
+               {
+                  "name": "Reidar Molthe",
+                  "id": "100001611521635"
+               }
+            ],
+            "count": 34
+         }
+      },
+      {
+         "id": "133713366690788_541208022607985",
+         "from": {
+            "id": "133713366690788",
+            "category": "Company",
+            "name": "Ole Robert Reitan, REMA 1000"
+         },
+         "message": "10 av 10 pristester vunnet hittil i \u00e5r.",
+         "picture": "http://external.ak.fbcdn.net/safe_image.php?d=AQDFGTVlfnpIRdi9&w=154&h=154&url=http\u00253A\u00252F\u00252Fwww.nettavisen.no\u00252Fmultimedia\u00252Fna\u00252Farchive\u00252F01210\u00252FHandlekurv_matv_121052116x9.jpg",
+         "link": "http://www.side2.no/livsstil/article3628296.ece",
+         "name": "Her er frukt og gr\u00f8nt billigst",
+         "caption": "www.side2.no",
+         "icon": "http://static.ak.fbcdn.net/rsrc.php/v2/yD/r/aS8ecmYRys0.gif",
+         "privacy": {
+            "value": ""
+         },
+         "type": "link",
+         "status_type": "shared_story",
+         "created_time": "2013-05-28T09:03:53+0000",
+         "updated_time": "2013-05-28T09:03:53+0000",
+         "shares": {
+            "count": 1
+         },
+         "likes": {
+            "data": [
+               {
+                  "name": "Bj\u00f8rn Vegard Nilsen",
+                  "id": "100001923335829"
+               },
+               {
+                  "name": "Ida Halvorsen",
+                  "id": "540426359"
+               },
+               {
+                  "name": "Wendy S\u00e6thre",
+                  "id": "633956975"
+               },
+               {
+                  "name": "Rolf Erik Lie",
+                  "id": "1816980318"
+               }
+            ],
+            "count": 96
+         }
+      },
+      {
+         "id": "133713366690788_291182004348539",
+         "from": {
+            "id": "133713366690788",
+            "category": "Company",
+            "name": "Ole Robert Reitan, REMA 1000"
+         },
+         "message": "Streetfootball Academy 2013 er nå i gang. Ungdom med ulik bakgrunn som faller utenfor den organiserte idretten, i yrkeslivet og i samfunnet generelt, får gjennom dette prosjektet nye muligheter. Lær mer om prosjektet på http://www.streetfootball.no/ og via dette innslaget på RTV: http://www.rema1000.tv/?channel=Nyheter#v_5f6ab20a-7111-491a-bc6c-a11900e7c63c",
+         "picture": "http://external.ak.fbcdn.net/safe_image.php?d=AQD0kmjJlgYHPjCU&w=154&h=154&url=http%3A%2F%2Fa1.mndcdn.com%2Fimage%2Fupload%2Ft_article_v2%2Fvyocdkw3iyxoxvmnzwin.jpg",
+         "link": "http://www.mynewsdesk.com/no/pressroom/reitangruppen/pressrelease/view/i-dag-starter-streetfootball-academy-853087?utm_source=realtime&utm_medium=email&utm_campaign=Subscription&utm_content",
+         "name": "I dag starter Streetfootball Academy",
+         "caption": "www.mynewsdesk.com",
+         "description": "Gjennom sponsoravtalen med REMA 1000 starter Streetfootball Norway i dag Streetfootball Academy 2013 med 100 deltakere. Programmet består av gratis...",
+         "icon": "http://static.ak.fbcdn.net/rsrc.php/v2/yD/r/aS8ecmYRys0.gif",
+         "privacy": {
+            "value": ""
+         },
+         "type": "link",
+         "status_type": "shared_story",
+         "created_time": "2013-04-06T08:33:19+0000",
+         "updated_time": "2013-04-06T08:33:19+0000",
+         "likes": {
+            "data": [
+               {
+                  "name": "Sjølvaste Trude",
+                  "id": "37006551"
+               },
+               {
+                  "name": "Christopher Andersen",
+                  "id": "529331325"
+               },
+               {
+                  "name": "Geir Lindstrøm",
+                  "id": "1350416838"
+               },
+               {
+                  "name": "Anne K. Eggen Lervik",
+                  "id": "657942656"
+               }
+            ]
+         },
+         "count": 18
+      }
+   ]
+}
