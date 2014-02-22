@@ -1,6 +1,7 @@
 # Mingle
 
 [![Code Climate](https://codeclimate.com/github/hyperoslo/mingle.png)](https://codeclimate.com/github/hyperoslo/mingle)
+[![Build Status](https://travis-ci.org/hyperoslo/mingle.png)](https://travis-ci.org/hyperoslo/mingle)
 
 Facebook, Twitter and Instagram integration for Ruby on Rails
 
