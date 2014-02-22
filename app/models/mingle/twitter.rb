@@ -6,7 +6,6 @@ module Mingle::Twitter
       "#{Mingle.table_name_prefix}twitter_"
     end
 
-    # Fetch tweets for #klhd since given tweet ID, last stored tweet ID or beginning of time
     def fetch hashtags = Mingle::Hashtag.all, since_id = Mingle::Twitter::Tweet.ordered.last.try(:tweet_id)
       hashtags = Array(hashtags)
 
