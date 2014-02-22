@@ -24,10 +24,6 @@ describe Mingle::Facebook do
                    .with(klhd_hashtag, nil)
                    .and_call_original
 
-      Mingle::Facebook.should_receive(:posts_by_page).once
-                   .with(133713366690788, nil)
-                   .and_call_original
-
       Mingle::Facebook.fetch klhd_hashtag
     end
 
@@ -40,10 +36,6 @@ describe Mingle::Facebook do
                    .with(thousand_hashtag, nil)
                    .and_call_original
 
-      Mingle::Facebook.should_receive(:posts_by_page).once
-                   .with(133713366690788, nil)
-                   .and_call_original
-
       Mingle::Facebook.fetch [klhd_hashtag, thousand_hashtag]
     end
 
@@ -54,10 +46,6 @@ describe Mingle::Facebook do
                    .with(klhd_hashtag, since)
                    .and_call_original
 
-      Mingle::Facebook.should_receive(:posts_by_page).once
-                   .with(133713366690788, since)
-                   .and_call_original
-
       Mingle::Facebook.fetch klhd_hashtag, since
     end
 
@@ -66,60 +54,21 @@ describe Mingle::Facebook do
 
       post = posts.first
 
-      expect(post.created_at).to eq DateTime.parse('2013-10-29T09:21:59+0000')
       expect(post.message).to eq '#KLHD'
       expect(post.type).to eq 'status'
       expect(post.user_id).to eq '577910407'
       expect(post.user_name).to eq 'John-John Myhrvold'
+      expect(post.created_at).to eq DateTime.parse('2013-10-29T09:21:59+0000')
 
       post = posts.second
 
-      expect(post.created_at).to eq DateTime.parse('2013-10-29T09:00:42+0000')
       expect(post.message).to eq '#klhd Rema skolen :D'
       expect(post.type).to eq 'status'
       expect(post.user_id).to eq '880440296'
       expect(post.user_name).to eq 'Chris-Stian Tjorven Selstad'
+      expect(post.created_at).to eq DateTime.parse('2013-10-29T09:00:42+0000')
 
-      post = posts.third
-
-      expect(post.caption).to be_nil
-      expect(post.created_at).to eq DateTime.parse('2013-05-29T08:01:00+0000')
-      expect(post.description).to be_nil
-      expect(post.link).to eq 'https://www.facebook.com/photo.php?fbid=541643485897772&set=a.133719816690143.26618.133713366690788&type=1&relevant_count=1'
-      expect(post.message).to match /^Denne uken sitter nye REMA 1000-kjøpmenn i Gladengveien/
-      expect(post.name).to be_nil
-      expect(post.picture).to eq 'http://photos-e.ak.fbcdn.net/hphotos-ak-frc3/312138_541643485897772_481929988_s.jpg'
-      expect(post.type).to eq 'photo'
-      expect(post.user_id).to eq '133713366690788'
-      expect(post.user_name).to eq 'Ole Robert Reitan, REMA 1000'
-
-      post = posts.fourth
-
-      expect(post.caption).to eq 'www.side2.no'
-      expect(post.created_at).to eq DateTime.parse('2013-05-28T09:03:53+0000')
-      expect(post.description).to be_nil
-      expect(post.link).to eq 'http://www.side2.no/livsstil/article3628296.ece'
-      expect(post.message).to eq '10 av 10 pristester vunnet hittil i år.'
-      expect(post.name).to eq 'Her er frukt og grønt billigst'
-      expect(post.picture).to eq 'http://external.ak.fbcdn.net/safe_image.php?d=AQDFGTVlfnpIRdi9&w=154&h=154&url=http%3A%2F%2Fwww.nettavisen.no%2Fmultimedia%2Fna%2Farchive%2F01210%2FHandlekurv_matv_121052116x9.jpg'
-      expect(post.type).to eq 'link'
-      expect(post.user_id).to eq '133713366690788'
-      expect(post.user_name).to eq 'Ole Robert Reitan, REMA 1000'
-
-      post = posts.last
-
-      expect(post.caption).to eq 'www.mynewsdesk.com'
-      expect(post.created_at).to eq DateTime.parse('2013-04-06T08:33:19+0000')
-      expect(post.description).to match /^Gjennom sponsoravtalen med REMA 1000 starter Streetfootball Norway i dag/
-      expect(post.link).to eq 'http://www.mynewsdesk.com/no/pressroom/reitangruppen/pressrelease/view/i-dag-starter-streetfootball-academy-853087?utm_source=realtime&utm_medium=email&utm_campaign=Subscription&utm_content'
-      expect(post.message).to match /^Streetfootball Academy 2013 er nå i gang./
-      expect(post.name).to eq 'I dag starter Streetfootball Academy'
-      expect(post.picture).to eq 'http://external.ak.fbcdn.net/safe_image.php?d=AQD0kmjJlgYHPjCU&w=154&h=154&url=http%3A%2F%2Fa1.mndcdn.com%2Fimage%2Fupload%2Ft_article_v2%2Fvyocdkw3iyxoxvmnzwin.jpg'
-      expect(post.type).to eq 'link'
-      expect(post.user_id).to eq '133713366690788'
-      expect(post.user_name).to eq 'Ole Robert Reitan, REMA 1000'
-
-      expect(Mingle::Facebook::Post.count).to eq 5
+      expect(Mingle::Facebook::Post.count).to eq 2
     end
 
     it 'is idempotent' do

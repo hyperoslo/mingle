@@ -3,7 +3,8 @@
 [![Code Climate](https://codeclimate.com/github/hyperoslo/mingle.png)](https://codeclimate.com/github/hyperoslo/mingle)
 [![Build Status](https://travis-ci.org/hyperoslo/mingle.png)](https://travis-ci.org/hyperoslo/mingle)
 
-Facebook, Twitter and Instagram integration for Ruby on Rails
+Mingle makes it really easy to syndicate posts, tweets and photos from various platforms into your Ruby
+on Rails application.
 
 ## Installation
 
@@ -22,6 +23,9 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
+# Create some hashtags to syndicate content from
+Mingle::Hashtag.create tag_name: "#hyper"
+
 # Fetch posts from Facebook
 Mingle::Facebook.fetch
 

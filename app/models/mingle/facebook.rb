@@ -16,9 +16,6 @@ module Mingle::Facebook
         posts += posts_through_search hashtag, since
       end
 
-      # Ole Robert Reitan's posts on his Facebook page
-      posts += posts_by_page 133713366690788, since
-
       posts.collect do |data|
         create_post_from_data(data, hashtags)
       end
