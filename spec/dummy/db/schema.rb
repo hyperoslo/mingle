@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140222112741) do
+ActiveRecord::Schema.define(version: 20140222125715) do
 
   create_table "mingle_facebook_posts", force: true do |t|
     t.string   "post_id"
@@ -29,6 +29,17 @@ ActiveRecord::Schema.define(version: 20140222112741) do
   end
 
   add_index "mingle_facebook_posts", ["post_id"], name: "index_mingle_facebook_posts_on_post_id"
+
+  create_table "mingle_feed_items", force: true do |t|
+    t.integer  "feedable_id"
+    t.string   "feedable_type"
+    t.boolean  "published",     default: true
+    t.boolean  "sticky",        default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "mingle_feed_items", ["feedable_id", "feedable_type"], name: "index_mingle_feed_items_on_feedable_id_and_feedable_type"
 
   create_table "mingle_hashtaggings", force: true do |t|
     t.integer  "hashtag_id"
