@@ -36,6 +36,14 @@ Mingle::Twitter.fetch
 Mingle::Instagram.fetch
 ```
 
+Mingle also ships with rake tasks:
+
+```bash
+$ rake mingle:facebook:fetch
+$ rake mingle:twitter:fetch
+$ rake mingle:instagram:fetch
+```
+
 ## Jobs
 
 Mingle ships with Sidekiq jobs for your perusal.
