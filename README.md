@@ -3,8 +3,8 @@
 [![Code Climate](https://codeclimate.com/github/hyperoslo/mingle.png)](https://codeclimate.com/github/hyperoslo/mingle)
 [![Build Status](https://travis-ci.org/hyperoslo/mingle.png)](https://travis-ci.org/hyperoslo/mingle)
 
-Mingle makes it really easy to syndicate posts, tweets and photos from various platforms into your Ruby
-on Rails application.
+Mingle makes it really easy to syndicate posts from Facebook, tweets from Twitter and photos from Instagram
+in your Ruby on Rails application.
 
 ## Installation
 
