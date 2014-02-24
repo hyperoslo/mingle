@@ -1,8 +1,4 @@
 class Mingle::Facebook::Post < ActiveRecord::Base
-
-  has_many :feed_items, class_name: 'Mingle::Feed::Item', as: :feedable,
-    inverse_of: :feedable, dependent: :destroy
-
   has_many :hashtaggings, class_name: 'Mingle::Hashtagging', as: :hashtaggable,
     dependent: :destroy
 
