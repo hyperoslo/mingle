@@ -17,5 +17,9 @@ module Mingle
       g.assets false
       g.helper false
     end
+
+    rake_tasks do
+      load 'tasks/mingle_tasks.rake'
+    end
   end
 end
