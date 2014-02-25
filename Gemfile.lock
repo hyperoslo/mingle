@@ -1,11 +1,11 @@
 PATH
   remote: .
   specs:
-    mingle (0.1)
+    mingle (0.1.1)
       faraday (~> 0.8.9)
       fb_graph (~> 2.7)
       instagram (~> 0.10)
-      rails (~> 4.1.beta)
+      rails (~> 4.0)
       twitter (~> 5.5)
 
 GEM
@@ -178,6 +178,7 @@ PLATFORMS
 DEPENDENCIES
   factory_girl_rails
   mingle!
+  rails (= 4.1.0.rc1)
   rspec-rails
   sidekiq
   sqlite3
