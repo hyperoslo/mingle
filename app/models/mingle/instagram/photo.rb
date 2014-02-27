@@ -8,6 +8,14 @@ class Mingle::Instagram::Photo < ActiveRecord::Base
 
   before_save :ensure_https_urls
 
+  def author
+    user_handle
+  end
+
+  def avatar
+    user_image_url
+  end
+
   private
 
   def ensure_https_urls

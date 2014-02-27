@@ -40,4 +40,16 @@ describe Mingle::Facebook::Post do
       expect(subject.profile_image_url).to be_nil
     end
   end
+
+  describe "#author" do
+    it 'should be the username' do
+      expect(subject.author).to eq subject.user_name
+    end
+  end
+
+  describe "#avatar" do
+    it 'should be the profile image' do
+      expect(subject.avatar).to eq subject.profile_image_url
+    end
+  end
 end

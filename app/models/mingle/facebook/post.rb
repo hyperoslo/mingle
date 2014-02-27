@@ -25,4 +25,12 @@ class Mingle::Facebook::Post < ActiveRecord::Base
   def profile_image_url
     "https://graph.facebook.com/#{user_id}/picture" if user_id.present?
   end
+
+  def author
+    user_name
+  end
+
+  def avatar
+    profile_image_url
+  end
 end
