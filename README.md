@@ -71,3 +71,8 @@ Mingle looks to the following environment variables for its configuration:
 
 Hyper made this. We're a digital communications agency with a passion for good code,
 and if you're using this library we probably want to hire you.
+
+
+## License
+
+Mingle is available under the MIT license. See the LICENSE file for more info.
