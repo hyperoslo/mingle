@@ -20,6 +20,14 @@ Or install it yourself as:
 
     $ gem install mingle
 
+Install the migrations:
+
+    rake mingle:install:migrations
+    
+Run the migrations:
+
+    rake db:migrate
+
 ## Usage
 
 ```ruby
