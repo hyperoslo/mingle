@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    mingle (0.2.0)
+    mingle (0.3.0)
       faraday (~> 0.8.9)
       fb_graph (~> 2.7)
       instagram (~> 0.10)
