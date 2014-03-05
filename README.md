@@ -58,14 +58,37 @@ Mingle ships with Sidekiq jobs for your perusal.
 
 ## Configuration
 
-Mingle looks to the following environment variables for its configuration:
+Mingle is configured through `Mingle.configure`, like this:
 
-* `FACEBOOK_ACCESS_TOKEN` - A Facebook application's access token.
-* `TWITTER_API_KEY` - A Twitter application's API key.
-* `TWITTER_API_SECRET` - A Twitter application's API secret.
-* `TWITTER_ACCESS_TOKEN` - A Twitter application's access token.
-* `TWITTER_ACCESS_TOKEN_SECRET` - A Twitter application's access token secret.
-* `INSTAGRAM_CLIENT_ID` - An Instagram application's client id.
+```ruby
+Mingle.configure do |config|
+  config.facebook_access_token = ENV['FACEBOOK_ACCESS_TOKEN']
+  # ...
+end
+```
+
+The following configurations can be made through `Mingle.configure`:
+
+* `facebook_access_token` - A Facebook application's access token.
+* `twitter_api_key` - A Twitter application's API key.
+* `twitter_api_secret` - A Twitter application's API secret.
+* `twitter_access_token` - A Twitter application's access token.
+* `twitter_access_token_secret` - A Twitter application's access token secret.
+* `instagram_client_id` - An Instagram application's client id.
+
+**Note:** We recommend you store your application configuration in your
+environment, like in the example above. In fact, we recommend it so much that
+Mingle will automatically look for environment variables with specific names,
+unless you configure them through `Mingle.configure`.
+
+Mingle checks for following environment variables by default:
+
+* `FACEBOOK_ACCESS_TOKEN` - the equivalent of `facebook_access_token`
+* `TWITTER_API_KEY` - the equivalent of `twitter_api_key`
+* `TWITTER_API_SECRET` - the equivalent of `twitter_api_secret`
+* `TWITTER_ACCESS_TOKEN` - the equivalent of `twitter_access_token`
+* `TWITTER_ACCESS_TOKEN_SECRET` - the equivalent of `twitter_access_token_secret`
+* `INSTAGRAM_CLIENT_ID` - the equivalent of `instagram_client_id`
 
 ## Contributing
 
