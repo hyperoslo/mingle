@@ -4,7 +4,6 @@ module Mingle::Instagram
     "#{Mingle.table_name_prefix}instagram_"
   end
 
-  # Fetch recent photos tagged with 'klhd'
   def self.fetch hashtags = Mingle::Hashtag.all
     hashtags = Array(hashtags)
 
