@@ -30,6 +30,7 @@ describe Mingle::Instagram do
     expect(photo.user_handle).to eq 'eivindhilling'
     expect(photo.user_id).to eq '272366028'
     expect(photo.user_image_url).to eq 'https://distillery.s3.amazonaws.com/profiles/profile_272366028_75sq_1365676035.jpg'
+    expect(photo.user_name).to eq 'Eivind Hilling'
 
     photo = photos.last
 
@@ -41,6 +42,7 @@ describe Mingle::Instagram do
     expect(photo.user_handle).to eq 'eivindhilling'
     expect(photo.user_id).to eq '272366028'
     expect(photo.user_image_url).to eq 'https://distillery.s3.amazonaws.com/profiles/profile_272366028_75sq_1365676035.jpg'
+    expect(photo.user_name).to eq 'Eivind Hilling'
 
     expect(Mingle::Instagram::Photo.count).to be 2
   end
