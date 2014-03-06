@@ -6,10 +6,12 @@ describe Mingle::Twitter do
   let(:hashtag) { create :mingle_hashtag, tag_name: '#klhd' }
 
   before do
-    ENV['TWITTER_API_KEY'] = '...'
-    ENV['TWITTER_API_SECRET'] = '...'
-    ENV['TWITTER_ACCESS_TOKEN'] = '...'
-    ENV['TWITTER_ACCESS_TOKEN_SECRET'] = '...'
+    Mingle.configure do |config|
+      config.twitter_api_key = '...'
+      config.twitter_api_secret = '...'
+      config.twitter_access_token = '...'
+      config.twitter_access_token_secret = '...'
+    end
   end
 
   it 'should prefix the database table name of namespaced models' do

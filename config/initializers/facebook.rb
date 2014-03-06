@@ -1,3 +1,3 @@
 Mingle::Facebook.configure do |config|
-  config.access_token = ENV['FACEBOOK_ACCESS_TOKEN']
+  config.access_token = Mingle.config.facebook_access_token
 end
