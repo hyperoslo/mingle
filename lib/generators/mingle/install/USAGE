@@ -1,0 +1,9 @@
+Description:
+  Copies over a default configuration file for Mingle into your application's
+  initializer directory.
+
+Example:
+  rails generate mingle:install
+
+  This will create:
+    config/initializers/mingle.rb
