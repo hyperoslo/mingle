@@ -18,7 +18,7 @@ module Mingle
     # Set temporary configuration options for the duration of the given block.
     #
     # options - A Hash describing temporary configuration options.
-    def temporarily options
+    def temporarily options = {}
       original = @config.dup
 
       options.each do |key, value|
@@ -26,7 +26,7 @@ module Mingle
       end
 
       yield
-
+    ensure
       @config = original
     end
   end
