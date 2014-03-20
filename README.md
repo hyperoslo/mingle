@@ -67,6 +67,14 @@ Mingle.configure do |config|
 end
 ```
 
+You can also configure it temporarily:
+
+```ruby
+Mingle.temporarily facebook_access_token: 'ABC123' do
+  # ...
+end
+```
+
 The following configurations can be made through `Mingle.configure`:
 
 * `facebook_access_token` - A Facebook application's access token.
