@@ -57,4 +57,13 @@ describe Mingle::Instagram do
     expect(photo.hashtags).to eq [ hashtag ]
   end
 
+  it 'will ignore photos that are too old' do
+    stub_request(:get, /api\.instagram\.com\/v1\/tags\/klhd\/media\/recent\.json/).to_return body: fixture('mingle/instagram/photos.json')
+
+    Mingle.temporarily since: Time.now do
+      photos = Mingle::Instagram.fetch hashtag
+
+      expect(photos.count).to eq 0
+    end
+  end
 end

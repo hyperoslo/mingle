@@ -83,6 +83,7 @@ The following configurations can be made through `Mingle.configure`:
 * `twitter_access_token` - A Twitter application's access token.
 * `twitter_access_token_secret` - A Twitter application's access token secret.
 * `instagram_client_id` - An Instagram application's client id.
+* `since` - A date before which posts, tweets and photos will be ignored.
 
 **Note:** We recommend you store your application configuration in your
 environment, like in the example above. In fact, we recommend it so much that

@@ -27,6 +27,18 @@ describe Mingle::Facebook do
       Mingle::Facebook.fetch klhd_hashtag
     end
 
+    it 'can fetch posts since the configured time' do
+      offset = 2.days.ago
+
+      Mingle.temporarily since: offset do
+        Mingle::Facebook.should_receive(:posts_through_search).once
+                    .with(klhd_hashtag, offset)
+                    .and_call_original
+
+        Mingle::Facebook.fetch klhd_hashtag
+      end
+    end
+
     it 'accepts multiple hashtags' do
       Mingle::Facebook.should_receive(:posts_through_search).once
                    .with(klhd_hashtag, nil)

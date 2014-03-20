@@ -25,9 +25,11 @@ module Mingle::Twitter
 
           tweet.hashtags << hashtag unless tweet.hashtags.include? hashtag
 
+          next if ignore? tweet
+
           tweet.save!
           tweet
-        end
+        end.compact
       end.flatten
     end
 
@@ -43,6 +45,14 @@ module Mingle::Twitter
       end
     end
 
+    # Determine whether the given tweet should be ignored.
+    #
+    # tweet - A Tweet instance.
+    #
+    # Returns a Boolean.
+    def ignore? tweet
+      Mingle.config.since && tweet.created_at < Mingle.config.since
+    end
   end
 
 end

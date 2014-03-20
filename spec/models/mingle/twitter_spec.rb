@@ -68,4 +68,13 @@ describe Mingle::Twitter do
     expect(tweet.hashtags).to eq [ hashtag ]
   end
 
+  it 'will ignore tweets that are too old' do
+    stub_request(:get, /api.twitter.com\/1\.1\/search\/tweets\.json/).to_return body: fixture('mingle/twitter/tweets.json')
+
+    Mingle.temporarily(since: Time.now) do
+      tweets = Mingle::Twitter.fetch hashtag
+
+      expect(tweets.count).to eq 0
+    end
+  end
 end

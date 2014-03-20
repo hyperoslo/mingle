@@ -8,7 +8,15 @@ module Mingle::Facebook
     end
 
     # Fetch posts since given date/timestamp, last post's creation date or beginning of time
-    def fetch(hashtags = Mingle::Hashtag.all, since = Mingle::Facebook::Post.ordered.last.try(:created_at))
+    def fetch(hashtags = Mingle::Hashtag.all, since = nil)
+      unless since
+        if Post.any?
+          since = Post.ordered.last.created_at
+        else
+          since = Mingle.config.since
+        end
+      end
+
       hashtags = Array(hashtags)
 
       posts = []

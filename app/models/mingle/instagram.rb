@@ -26,6 +26,8 @@ module Mingle::Instagram
 
           photo.hashtags << hashtag unless photo.hashtags.include? hashtag
 
+          next if ignore? photo
+
           photo.save!
           photo
         end
@@ -33,4 +35,14 @@ module Mingle::Instagram
     end.flatten
   end
 
+  private
+
+  # Determine whether the given photo should be ignored.
+  #
+  # photo - A Photo instance.
+  #
+  # Returns a Boolean.
+  def self.ignore? photo
+    Mingle.config.since && photo.created_at < Mingle.config.since
+  end
 end
