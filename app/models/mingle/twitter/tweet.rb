@@ -18,6 +18,10 @@ class Mingle::Twitter::Tweet < ActiveRecord::Base
     user_image_url
   end
 
+  def url
+    "https://twitter.com/#{user_handle}/status/#{tweet_id}"
+  end
+
   private
 
   def ensure_https_urls
