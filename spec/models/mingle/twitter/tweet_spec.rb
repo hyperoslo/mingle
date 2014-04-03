@@ -12,7 +12,7 @@ describe Mingle::Twitter::Tweet do
       expect(subject.avatar).to eq subject.user_image_url
     end
   end
-  
+
   describe "#url" do
     it 'should be the tweet url' do
       subject.stub(:user_handle).and_return 'sindre'
