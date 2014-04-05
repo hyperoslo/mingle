@@ -23,7 +23,7 @@ Or install it yourself as:
 Install the migrations:
 
     rake mingle:install:migrations
-    
+
 Run the migrations:
 
     rake db:migrate
