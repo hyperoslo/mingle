@@ -1,7 +1,10 @@
 # Mingle
 
-[![Code Climate](https://img.shields.io/codeclimate/github/hyperoslo/mingle.svg)](https://codeclimate.com/github/hyperoslo/mingle)
+[![Gem Version](https://img.shields.io/gem/v/mingle.svg)](https://rubygems.org/gems/mingle)
 [![Build Status](https://img.shields.io/travis/hyperoslo/mingle.svg)](https://travis-ci.org/hyperoslo/mingle)
+[![Dependency Status](https://img.shields.io/gemnasium/hyperoslo/mingle.svg)](https://gemnasium.com/hyperoslo/mingle)
+[![Code Climate](https://img.shields.io/codeclimate/github/hyperoslo/mingle.svg)](https://codeclimate.com/github/hyperoslo/mingle)
+[![Coverage Status](https://img.shields.io/coveralls/hyperoslo/mingle.svg)](https://coveralls.io/r/hyperoslo/mingle)
 
 Mingle makes it really easy to syndicate posts from Facebook, tweets from Twitter and photos from Instagram
 in your Ruby on Rails application.
