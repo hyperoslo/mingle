@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 4.0"
   s.add_dependency "twitter", "~> 5.5"
   s.add_dependency "fb_graph", "~> 2.7"
-  s.add_dependency "instagram", "~> 0.10"
+  s.add_dependency "instagram", "~> 1.0"
 
   # Twitter and Instagram both depend on Faraday, but Instagram hasn't been
   # updated for some time and requires version < 0.9.
