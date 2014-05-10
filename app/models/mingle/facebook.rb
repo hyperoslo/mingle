@@ -32,7 +32,7 @@ module Mingle::Facebook
     # Retrieves posts through given search query
     def posts_through_search hashtag, since
       warn "DEPRECATION WARNING: Facebook has deprecated searching for posts. It is no " +
-           "longer available for new  applications and will cease to work for existing " +
+           "longer available for new applications and will cease to work for existing " +
            "applications in April 2015."
 
       posts = FbGraph::Post.search(hashtag.tag_name_with_hash, since: since.to_i, return_ssl_resources: 1, access_token: config.access_token)
