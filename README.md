@@ -3,7 +3,7 @@
 [![Code Climate](https://codeclimate.com/github/hyperoslo/mingle.png)](https://codeclimate.com/github/hyperoslo/mingle)
 [![Build Status](https://travis-ci.org/hyperoslo/mingle.png)](https://travis-ci.org/hyperoslo/mingle)
 
-Mingle makes it really easy to syndicate posts from Facebook, tweets from Twitter and photos from Instagram
+Mingle makes it really easy to syndicate tweets from Twitter and photos from Instagram
 in your Ruby on Rails application.
 
 ## Installation
@@ -34,9 +34,6 @@ Run the migrations:
 # Create some hashtags to syndicate content from
 Mingle::Hashtag.create tag_name: "#hyper"
 
-# Fetch posts from Facebook
-Mingle::Facebook.fetch
-
 # Fetch tweets from Twitter
 Mingle::Twitter.fetch
 
@@ -47,7 +44,6 @@ Mingle::Instagram.fetch
 Mingle also ships with rake tasks:
 
 ```bash
-$ rake mingle:facebook:fetch
 $ rake mingle:twitter:fetch
 $ rake mingle:instagram:fetch
 ```
@@ -62,7 +58,7 @@ Mingle is configured through `Mingle.configure`, like this:
 
 ```ruby
 Mingle.configure do |config|
-  config.facebook_access_token = ENV['FACEBOOK_ACCESS_TOKEN']
+  config.twitter_api_key = ENV['TWITTER_API_KEY']
   # ...
 end
 ```
@@ -70,14 +66,13 @@ end
 You can also configure it temporarily:
 
 ```ruby
-Mingle.temporarily facebook_access_token: 'ABC123' do
+Mingle.temporarily twitter_api_key: 'ABC123' do
   # ...
 end
 ```
 
 The following configurations can be made through `Mingle.configure`:
 
-* `facebook_access_token` - A Facebook application's access token.
 * `twitter_api_key` - A Twitter application's API key.
 * `twitter_api_secret` - A Twitter application's API secret.
 * `twitter_access_token` - A Twitter application's access token.
@@ -92,7 +87,6 @@ unless you configure them through `Mingle.configure`.
 
 Mingle checks for following environment variables by default:
 
-* `FACEBOOK_ACCESS_TOKEN` - the equivalent of `facebook_access_token`
 * `TWITTER_API_KEY` - the equivalent of `twitter_api_key`
 * `TWITTER_API_SECRET` - the equivalent of `twitter_api_secret`
 * `TWITTER_ACCESS_TOKEN` - the equivalent of `twitter_access_token`
