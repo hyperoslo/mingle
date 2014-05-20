@@ -8,8 +8,6 @@ class Mingle::Twitter::Tweet < ActiveRecord::Base
 
   scope :ordered, lambda { order('created_at ASC') }
 
-  before_save :ensure_https_urls
-
   def author
     user_handle
   end
@@ -20,11 +18,5 @@ class Mingle::Twitter::Tweet < ActiveRecord::Base
 
   def url
     "https://twitter.com/#{user_handle}/status/#{tweet_id}"
-  end
-
-  private
-
-  def ensure_https_urls
-    self.user_image_url = user_image_url.sub(/http:/, 'https:')
   end
 end

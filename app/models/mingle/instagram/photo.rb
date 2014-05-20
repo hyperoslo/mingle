@@ -6,8 +6,6 @@ class Mingle::Instagram::Photo < ActiveRecord::Base
 
   scope :ordered, lambda { order('created_at ASC') }
 
-  before_save :ensure_https_urls
-
   def author
     user_handle
   end
@@ -15,14 +13,4 @@ class Mingle::Instagram::Photo < ActiveRecord::Base
   def avatar
     user_image_url
   end
-
-  private
-
-  def ensure_https_urls
-    self.link = link.sub(/http:/, 'https:')
-    self.url = url.sub(/http:/, 'https:')
-    self.user_image_url = user_image_url.sub(%r(http://images\.ak\.instagram\.com),
-                                              'https://distillery.s3.amazonaws.com')
-  end
-
 end
