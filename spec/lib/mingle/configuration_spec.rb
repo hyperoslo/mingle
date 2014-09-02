@@ -19,7 +19,8 @@ describe Mingle::Configuration do
   }
 
   NON_ENVIRONMENT_ENABLED_CONFIGURATIONS = {
-    since: 2.days.ago
+    since: 2.days.ago,
+    twitter_ignore_retweets: true
   }
 
   CONFIGURATIONS = ENVIRONMENT_ENABLED_CONFIGURATIONS.merge NON_ENVIRONMENT_ENABLED_CONFIGURATIONS
@@ -51,6 +52,12 @@ describe Mingle::Configuration do
           expect(subject.send(key)).to eq 'some-configured-secret'
         end
       end
+    end
+  end
+
+  describe "twitter_ignore_retweets" do
+    it "defaults to `false`" do
+      expect(subject.twitter_ignore_retweets).to be_false
     end
   end
 end

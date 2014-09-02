@@ -9,8 +9,11 @@ module Mingle::Twitter
     def fetch hashtags = Mingle::Hashtag.all, since_id = Mingle::Twitter::Tweet.ordered.last.try(:tweet_id)
       hashtags = Array(hashtags)
 
+      options = { since_id: since_id }
+      options[:exclude] = 'retweets' if Mingle.config.twitter_ignore_retweets
+
       hashtags.map do |hashtag|
-        client.search(hashtag.tag_name_with_hash, since_id: since_id).collect do |data|
+        client.search(hashtag.tag_name_with_hash, options).collect do |data|
           tweet = Tweet.find_or_initialize_by tweet_id: data.id.to_s
 
           tweet.attributes = {

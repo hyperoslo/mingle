@@ -3,10 +3,14 @@ module Mingle
     configs = [
       :facebook_access_token, :twitter_api_key, :twitter_api_secret,
       :twitter_access_token, :twitter_access_token_secret,
-      :instagram_client_id, :since
+      :twitter_ignore_retweets, :instagram_client_id, :since
     ]
 
     attr_accessor *configs
+
+    def initialize
+      @twitter_ignore_retweets = false
+    end
 
     def facebook_access_token
       @facebook_access_token || ENV['FACEBOOK_ACCESS_TOKEN']
