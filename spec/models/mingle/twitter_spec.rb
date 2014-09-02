@@ -32,6 +32,14 @@ describe Mingle::Twitter do
     Mingle::Twitter.fetch hashtag, 12391
   end
 
+  it 'can fetch tweets and ignore retweets' do
+    Mingle.config.twitter_ignore_retweets = true
+    Twitter::REST::Client.any_instance.should_receive(:search).with("#klhd", exclude: 'retweets', since_id: nil)
+      .and_return double(collect: [])
+
+    Mingle::Twitter.fetch hashtag
+  end
+
   it 'will create model instances for fetched tweets' do
     stub_request(:get, /api.twitter.com\/1\.1\/search\/tweets\.json/).to_return body: fixture('mingle/twitter/tweets.json')
 
