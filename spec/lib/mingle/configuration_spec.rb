@@ -57,7 +57,7 @@ describe Mingle::Configuration do
 
   describe "twitter_ignore_retweets" do
     it "defaults to `false`" do
-      expect(subject.twitter_ignore_retweets).to be_false
+      expect(subject.twitter_ignore_retweets).not_to be # it's not
     end
   end
 end
