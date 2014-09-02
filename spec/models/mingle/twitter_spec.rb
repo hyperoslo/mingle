@@ -11,6 +11,7 @@ describe Mingle::Twitter do
       config.twitter_api_secret = '...'
       config.twitter_access_token = '...'
       config.twitter_access_token_secret = '...'
+      config.twitter_ignore_retweets = false
     end
   end
 
