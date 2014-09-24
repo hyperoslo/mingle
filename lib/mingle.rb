@@ -1,5 +1,6 @@
 require 'mingle/engine'
 require 'mingle/configuration'
+require "mingle/concerns"
 
 require 'twitter'
 require 'fb_graph'
