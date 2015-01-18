@@ -16,5 +16,23 @@ module Mingle::Concerns::Models::Instagram::Photo
     def avatar
       user_image_url
     end
+
+    def created_before?(date)
+      return false unless date
+
+      created_at < date
+    end
+
+    def rejected_user?(rejected_users)
+      rejected_users.include? user_handle
+    end
+
+    def include_rejected_word?(rejected_words)
+      return false if !message || message.empty?
+
+      message.split(' ').inject(true) do |bool, word|
+        bool && rejected_words.include?(word.downcase)
+      end
+    end
   end
 end

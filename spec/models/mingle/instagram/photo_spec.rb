@@ -12,4 +12,50 @@ describe Mingle::Instagram::Photo do
       expect(subject.avatar).to eq subject.user_image_url
     end
   end
+
+  describe "#created_before?" do
+    it 'should return true' do
+      photo = described_class.new(created_at: 1.day.ago)
+      expect(photo.created_before?(Date.current)).to eq(true)
+    end
+
+    it 'should return false' do
+      photo = described_class.new(created_at: 1.day.ago)
+      expect(photo.created_before?(2.day.ago)).to eq(false)
+    end
+
+    it 'should return false when date is nil' do
+      photo = described_class.new(created_at: 1.day.ago)
+      expect(photo.created_before?(nil)).to eq(false)
+    end
+  end
+
+  describe "#rejected_user?" do
+    it "should return true" do
+      photo = described_class.new(user_handle: 'rejected_user')
+      expect(photo.rejected_user?(['rejected_user'])).to eq(true)
+    end
+    it "should return false" do
+      photo = described_class.new(user_handle: 'not_rejected_user')
+      expect(photo.rejected_user?(['rejected_user'])).to eq(false)
+    end
+  end
+
+  describe '#include_rejected_word?' do
+    it "should return true" do
+      photo = described_class.new(message: 'rejectedWord')
+      expect(photo.include_rejected_word?(['rejectedword'])).to eq(true)
+    end
+
+    it 'should return false when message is nil' do
+      photo = described_class.new(message: nil)
+      expect(photo.include_rejected_word?(['rejectedword'])).to eq(false)
+    end
+
+    it "should return false" do
+      photo = described_class.new(message: 'notRejectedWord')
+      expect(photo.include_rejected_word?(['rejectedword'])).to eq(false)
+    end
+
+  end
 end
