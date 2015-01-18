@@ -66,4 +66,25 @@ describe Mingle::Instagram do
       expect(photos.count).to eq 0
     end
   end
+
+  it 'will ignore photos with rejected words' do
+    stub_request(:get, /api\.instagram\.com\/v1\/tags\/klhd\/media\/recent\.json/).to_return body: fixture('mingle/instagram/photos.json')
+
+    Mingle.temporarily instagram_reject_words: ['foo'] do
+      photos = Mingle::Instagram.fetch hashtag
+
+      expect(photos.count).to eq 1
+    end
+
+  end
+  it 'will ignore photos from rejected user' do
+    stub_request(:get, /api\.instagram\.com\/v1\/tags\/klhd\/media\/recent\.json/).to_return body: fixture('mingle/instagram/photos.json')
+
+    Mingle.temporarily instagram_reject_users: ['eivindhilling']do
+      photos = Mingle::Instagram.fetch hashtag
+
+      expect(photos.count).to eq 0
+    end
+
+  end
 end

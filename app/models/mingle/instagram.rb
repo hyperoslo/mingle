@@ -43,6 +43,28 @@ module Mingle::Instagram
   #
   # Returns a Boolean.
   def self.ignore? photo
-    Mingle.config.since && photo.created_at < Mingle.config.since
+    include_rejected_word?(photo.message) || 
+      rejected_user?(photo.user_handle) ||
+      created_before?(photo, Mingle.config.since)
+  end
+
+  # TODO: Refactor to Photo
+  def self.created_before?(photo, date)
+    return false unless date
+
+    photo.created_at < Mingle.config.since
+  end
+
+  # TODO: Refactor to Photo
+  def self.include_rejected_word?(message)
+    return false unless message
+
+    message.split(' ').inject(true) do |bool, word|
+      bool && Mingle.config.instagram_reject_words.include?(word.downcase)
+    end
+  end
+
+  def self.rejected_user?(user)
+    Mingle.config.instagram_reject_users.include? user
   end
 end
