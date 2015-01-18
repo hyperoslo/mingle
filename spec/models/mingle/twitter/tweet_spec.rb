@@ -20,4 +20,21 @@ describe Mingle::Twitter::Tweet do
       expect(subject.url).to eq "https://twitter.com/sindre/status/1337"
     end
   end
+
+  describe "#created_before?" do
+    it 'should return true' do
+      photo = described_class.new(created_at: 1.day.ago)
+      expect(photo.created_before?(Date.current)).to eq(true)
+    end
+
+    it 'should return false' do
+      photo = described_class.new(created_at: 1.day.ago)
+      expect(photo.created_before?(2.day.ago)).to eq(false)
+    end
+
+    it 'should return false when date is nil' do
+      photo = described_class.new(created_at: 1.day.ago)
+      expect(photo.created_before?(nil)).to eq(false)
+    end
+  end
 end

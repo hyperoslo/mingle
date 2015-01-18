@@ -22,5 +22,11 @@ module Mingle::Concerns::Models::Twitter::Tweet
     def url
       "https://twitter.com/#{user_handle}/status/#{tweet_id}"
     end
+
+    def created_before?(date)
+      return false unless date
+
+      created_at < date
+    end
   end
 end

@@ -54,7 +54,7 @@ module Mingle::Twitter
     #
     # Returns a Boolean.
     def ignore? tweet
-      Mingle.config.since && tweet.created_at < Mingle.config.since
+      tweet.created_before?(Mingle.config.since)
     end
 
     # Builds query string for Tweet search.
