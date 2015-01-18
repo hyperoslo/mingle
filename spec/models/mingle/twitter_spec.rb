@@ -12,6 +12,8 @@ describe Mingle::Twitter do
       config.twitter_access_token = '...'
       config.twitter_access_token_secret = '...'
       config.twitter_ignore_retweets = false
+      config.twitter_reject_words = []
+      config.twitter_reject_users = []
     end
   end
 
@@ -36,6 +38,22 @@ describe Mingle::Twitter do
   it 'can fetch tweets and ignore retweets' do
     Mingle.config.twitter_ignore_retweets = true
     Twitter::REST::Client.any_instance.should_receive(:search).with("#klhd", exclude: 'retweets', since_id: nil)
+      .and_return double(collect: [])
+
+    Mingle::Twitter.fetch hashtag
+  end
+
+  it 'can fetch tweets and exclude words' do
+    Mingle.config.twitter_reject_words = ['boobs']
+    Twitter::REST::Client.any_instance.should_receive(:search).with("#klhd -boobs", since_id: nil)
+      .and_return double(collect: [])
+
+    Mingle::Twitter.fetch hashtag
+  end
+
+  it 'can fetch tweets and exclude users' do
+    Mingle.config.twitter_reject_users = ['rejectedUser']
+    Twitter::REST::Client.any_instance.should_receive(:search).with("#klhd -from:rejectedUser", since_id: nil)
       .and_return double(collect: [])
 
     Mingle::Twitter.fetch hashtag

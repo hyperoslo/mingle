@@ -13,7 +13,7 @@ module Mingle::Twitter
       options[:exclude] = 'retweets' if Mingle.config.twitter_ignore_retweets
 
       hashtags.map do |hashtag|
-        client.search(hashtag.tag_name_with_hash, options).collect do |data|
+        client.search(query_string(hashtag), options).collect do |data|
           tweet = Tweet.find_or_initialize_by tweet_id: data.id.to_s
 
           tweet.attributes = {
@@ -55,6 +55,29 @@ module Mingle::Twitter
     # Returns a Boolean.
     def ignore? tweet
       Mingle.config.since && tweet.created_at < Mingle.config.since
+    end
+
+    # Builds query string for Tweet search.
+    #
+    # Returns a String.
+    def query_string(hashtag)
+      hashtag.tag_name_with_hash +
+        rejected_words_string +
+        rejected_users_string
+    end
+
+    # Builds rejected words query string for Tweet search.
+    #
+    # Returns a String.
+    def rejected_words_string
+      Mingle.config.twitter_reject_words.map {|w| " -#{w}"}.join
+    end
+
+    # Builds rejected users query string for Tweet search.
+    #
+    # Returns a String.
+    def rejected_users_string
+      Mingle.config.twitter_reject_users.map {|w| " -from:#{w}"}.join
     end
   end
 

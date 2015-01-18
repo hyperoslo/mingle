@@ -3,13 +3,16 @@ module Mingle
     configs = [
       :facebook_access_token, :twitter_api_key, :twitter_api_secret,
       :twitter_access_token, :twitter_access_token_secret,
-      :twitter_ignore_retweets, :instagram_client_id, :since
+      :twitter_ignore_retweets, :instagram_client_id, :since,
+      :twitter_reject_words, :twitter_reject_users
     ]
 
     attr_accessor *configs
 
     def initialize
       @twitter_ignore_retweets = false
+      @twitter_reject_words = []
+      @twitter_reject_users = []
     end
 
     def facebook_access_token
