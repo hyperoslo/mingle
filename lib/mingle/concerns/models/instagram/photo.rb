@@ -28,11 +28,11 @@ module Mingle::Concerns::Models::Instagram::Photo
     end
 
     def include_rejected_word?(rejected_words)
-      return false if !message || message.empty?
+      rejected_words.select! {|w| w && !w.empty? }
 
-      message.split(' ').inject(true) do |bool, word|
-        bool && rejected_words.include?(word.downcase)
-      end
+      return false if !message? || rejected_words.empty?
+
+      rejected_words.any? {|w| message.match(/\b(#{w})\b/i) }
     end
   end
 end
