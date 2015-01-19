@@ -57,13 +57,28 @@ describe Mingle::Instagram do
     expect(photo.hashtags).to eq [ hashtag ]
   end
 
-  it 'will ignore photos that are too old' do
+  it 'will ignore photos that should be ignored' do
     stub_request(:get, /api\.instagram\.com\/v1\/tags\/klhd\/media\/recent\.json/).to_return body: fixture('mingle/instagram/photos.json')
+    allow(described_class).to receive(:ignore?).and_return(true)
 
-    Mingle.temporarily since: Time.now do
-      photos = Mingle::Instagram.fetch hashtag
+    photos = Mingle::Instagram.fetch hashtag
 
-      expect(photos.count).to eq 0
+    expect(photos.count).to eq 0
+  end
+
+
+  describe "#ignore?" do
+    it 'should return true' do
+      photo = double('a photo', include_rejected_word?: false, rejected_user?: true, created_before?: true)
+
+      expect(described_class.ignore? photo).to eq(true)
+    end
+
+    it 'should return false' do
+      photo = double('a photo', include_rejected_word?: false, rejected_user?: false, created_before?: false)
+
+      expect(described_class.ignore? photo).to eq(false)
     end
   end
+
 end

@@ -60,4 +60,28 @@ describe Mingle::Configuration do
       expect(subject.twitter_ignore_retweets).not_to be # it's not
     end
   end
+
+  describe "twitter_ignore_words" do
+    it 'defaults to empty array' do
+      expect(subject.twitter_reject_words).to eq([])
+    end
+  end
+
+  describe "twitter_ignore_users" do
+    it 'defaults to empty array' do
+      expect(subject.twitter_reject_users).to eq([])
+    end
+  end
+
+  describe "instagram_ignore_words" do
+    it 'defaults to empty array' do
+      expect(subject.instagram_reject_words).to eq([])
+    end
+  end
+
+  describe "instagram_ignore_users" do
+    it 'defaults to empty array' do
+      expect(subject.instagram_reject_users).to eq([])
+    end
+  end
 end
