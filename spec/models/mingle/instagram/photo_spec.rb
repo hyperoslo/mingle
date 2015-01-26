@@ -47,6 +47,16 @@ describe Mingle::Instagram::Photo do
       expect(photo.include_rejected_word?(['rejectedword'])).to eq(true)
     end
 
+    it "should return false rejected_words is empty array" do
+      photo = described_class.new(message: 'rejectedWord')
+      expect(photo.include_rejected_word?([])).to eq(false)
+    end
+
+    it "should return false when given empty strings and nil" do
+      photo = described_class.new(message: 'rejectedWord')
+      expect(photo.include_rejected_word?(['', nil])).to eq(false)
+    end
+
     it 'should return false when message is nil' do
       photo = described_class.new(message: nil)
       expect(photo.include_rejected_word?(['rejectedword'])).to eq(false)
