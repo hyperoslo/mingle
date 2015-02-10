@@ -8,7 +8,7 @@ module Mingle::Instagram
     hashtags = Array(hashtags)
 
     hashtags.flat_map do |hashtag|
-      PhotoFetcher.new(hashtag).fetch
+      PhotosFetcher.new(hashtag).fetch
     end
   end
 end

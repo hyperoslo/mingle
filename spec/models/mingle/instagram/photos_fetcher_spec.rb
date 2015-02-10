@@ -1,14 +1,14 @@
 require 'spec_helper'
 
-describe Mingle::Instagram::PhotoFetcher do
+describe Mingle::Instagram::PhotosFetcher do
   let(:hashtag) { create :mingle_hashtag, tag_name: 'klhd' }
-  subject(:photo_fetcher) { described_class.new(hashtag) }
+  subject(:photos_fetcher) { described_class.new(hashtag) }
 
   it 'can fetch recent photos' do
     expect(Instagram).to receive(:tag_recent_media).once
              .with('klhd').and_return []
 
-    photo_fetcher.fetch
+    photos_fetcher.fetch
   end
 
   describe 'build photos' do
@@ -16,7 +16,7 @@ describe Mingle::Instagram::PhotoFetcher do
       stub_request(:get, /api\.instagram\.com\/v1\/tags\/klhd\/media\/recent\.json/).to_return body: fixture('mingle/instagram/photos.json')
     end
 
-    let(:photos) { photo_fetcher.fetch }
+    let(:photos) { photos_fetcher.fetch }
 
     it 'will create model instances for fetched photos' do
       photo = photos.first
@@ -64,9 +64,9 @@ describe Mingle::Instagram::PhotoFetcher do
                                     include_rejected_word?: false,
                                     rejected_user?: false,
                                     save!: true)
-      allow(photo_fetcher).to receive(:photos_for_hashtag).
+      allow(photos_fetcher).to receive(:photos_for_hashtag).
         and_return([photo_created_after, photo_created_before])
-      expect(photo_fetcher.fetch.count).to eq(1)
+      expect(photos_fetcher.fetch.count).to eq(1)
     end
 
     it 'should ignore tweets which include rejected words' do
@@ -79,9 +79,9 @@ describe Mingle::Instagram::PhotoFetcher do
                                     include_rejected_word?: false,
                                     rejected_user?: false,
                                     save!: true)
-      allow(photo_fetcher).to receive(:photos_for_hashtag).
+      allow(photos_fetcher).to receive(:photos_for_hashtag).
         and_return([photo_with_rejected_word, photo_without_rejected_word])
-      expect(photo_fetcher.fetch.count).to eq(1)
+      expect(photos_fetcher.fetch.count).to eq(1)
     end
 
     it 'should ignore tweets which include rejected user' do
@@ -94,9 +94,9 @@ describe Mingle::Instagram::PhotoFetcher do
                                     include_rejected_word?: false,
                                     rejected_user?: false,
                                     save!: true)
-      allow(photo_fetcher).to receive(:photos_for_hashtag).
+      allow(photos_fetcher).to receive(:photos_for_hashtag).
         and_return([photo_with_rejected_user, photo_without_rejected_user])
-      expect(photo_fetcher.fetch.count).to eq(1)
+      expect(photos_fetcher.fetch.count).to eq(1)
     end
   end
 end

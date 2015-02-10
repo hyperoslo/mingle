@@ -9,12 +9,12 @@ describe Mingle::Instagram do
   end
 
   it 'fetch photos for hashtag' do
-    photo_fetcher = instance_spy(Mingle::Instagram::PhotoFetcher)
-    expect(Mingle::Instagram::PhotoFetcher).to receive(:new).with(hashtag).and_return(photo_fetcher)
+    photos_fetcher = instance_spy(Mingle::Instagram::PhotosFetcher)
+    expect(Mingle::Instagram::PhotosFetcher).to receive(:new).with(hashtag).and_return(photos_fetcher)
 
     Mingle::Instagram.fetch hashtag
 
-    expect(photo_fetcher).to have_received(:fetch)
+    expect(photos_fetcher).to have_received(:fetch)
   end
 
 end

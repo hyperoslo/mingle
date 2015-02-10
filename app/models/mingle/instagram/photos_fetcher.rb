@@ -1,5 +1,5 @@
 module Mingle::Instagram
-  class PhotoFetcher
+  class PhotosFetcher
     def initialize(hashtag)
       @hashtag = hashtag
     end
