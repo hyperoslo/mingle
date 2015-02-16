@@ -22,8 +22,7 @@ module Mingle::Twitter
         Tweet.find_or_initialize_by(tweet_id: data.id.to_s).tap do |tweet|
           tweet.attributes = {
             created_at: data.created_at,
-            image_url: 
-            data.media.any? ? data.media.first.media_url_https.to_s : nil,
+            image_url: data.media.any? ? data.media.first.media_url_https.to_s : nil,
             text: data.text,
             user_id: data.user.id.to_s,
             user_handle: data.user.screen_name,
