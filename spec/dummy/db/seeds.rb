@@ -8,7 +8,7 @@ unless Rails.env.test?
     WebMock.allow_net_connect!
 
     # Fetch tweets from Twitter
-    #Mingle::Twitter.fetch
+    Mingle::Twitter.fetch
 
     # Fetch photos from Instagram
     Mingle::Instagram.fetch
