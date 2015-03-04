@@ -5,6 +5,7 @@ require 'rspec/rails'
 require 'rspec/autorun'
 require 'factory_girl_rails'
 require 'webmock/rspec'
+require 'pry'
 
 Rails.backtrace_cleaner.remove_silencers!
 

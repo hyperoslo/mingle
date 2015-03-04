@@ -32,7 +32,7 @@ module Mingle::Instagram
             url: media.images.standard_resolution.url,
             user_handle: media.user.username,
             user_id: media.user.id,
-            user_image_url: media.user.profile_picture,
+            remote_avatar_url: media.user.profile_picture.to_s,
             user_name: media.user.full_name
           }
           photo.hashtags << hashtag unless photo.hashtags.exists? hashtag

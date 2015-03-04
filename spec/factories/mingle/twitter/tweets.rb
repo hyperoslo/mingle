@@ -6,7 +6,7 @@ FactoryGirl.define do
     user_handle 'timkurvers'
     user_name 'Tim Kurvers'
     user_id '84070520'
-    user_image_url 'http://a0.twimg.com/profile_images/1511444315/tim.oslo_normal.png'
+    remote_avatar_url 'http://a0.twimg.com/profile_images/1511444315/tim.oslo_normal.png'
   end
 
 end
