@@ -1,13 +1,19 @@
+require 'webmock'
+
 Mingle::Hashtag.create tag_name: "#hyper"
 
-begin
-  WebMock.allow_net_connect!
+unless Rails.env.test?
 
-  # Fetch tweets from Twitter
-  Mingle::Twitter.fetch
+  begin
+    WebMock.allow_net_connect!
 
-  # Fetch photos from Instagram
-  #Mingle::Instagram.fetch
-ensure
-  WebMock.disable_net_connect!
+    # Fetch tweets from Twitter
+    Mingle::Twitter.fetch
+
+    # Fetch photos from Instagram
+    #Mingle::Instagram.fetch
+  ensure
+    WebMock.disable_net_connect!
+  end
+
 end
