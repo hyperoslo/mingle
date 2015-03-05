@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150304091411) do
+ActiveRecord::Schema.define(version: 20150305083105) do
 
   create_table "mingle_facebook_posts", force: true do |t|
     t.string   "post_id"
@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(version: 20150304091411) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "user_name"
-    t.string   "avatar_id"
+    t.string   "profile_picture_id"
   end
 
   create_table "mingle_twitter_tweets", force: true do |t|
@@ -73,7 +73,7 @@ ActiveRecord::Schema.define(version: 20150304091411) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "url"
-    t.string   "avatar_id"
+    t.string   "profile_picture_id"
   end
 
 end

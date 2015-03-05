@@ -6,7 +6,8 @@ FactoryGirl.define do
     link 'http://instagram.com/link/to/photo'
     user_id 1
     user_handle 'timkurvers'
-    remote_avatar_url 'http://instagram.com/profile/image/url.jpg'
+    user_image_url 'http://instagram.com/profile/image/url.jpg'
+    remote_profile_picture_url 'http://instagram.com/profile/image/url.jpg'
   end
 
 end

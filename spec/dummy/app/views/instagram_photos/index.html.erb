@@ -1,5 +1,5 @@
 <h1>Instagram Photos</h1>
 
 <% @photos.each do |photo| %>
-<li><%= photo.message %> | <%= image_tag attachment_url(photo, :avatar, :fill, 150, 150) %></li>
+<li><%= photo.message %> | <%= image_tag attachment_url(photo, :profile_picture, :fill, 150, 150) %></li>
 <% end %>

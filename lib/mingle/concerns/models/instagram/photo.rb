@@ -2,7 +2,7 @@ module Mingle::Concerns::Models::Instagram::Photo
   extend ActiveSupport::Concern
 
   included do
-    attachment :avatar
+    attachment :profile_picture
 
     has_many :hashtaggings, class_name: 'Mingle::Hashtagging', as: :hashtaggable, dependent: :destroy
     has_many :hashtags, through: :hashtaggings
@@ -13,6 +13,10 @@ module Mingle::Concerns::Models::Instagram::Photo
 
     def author
       user_handle
+    end
+
+    def avatar
+      user_image_url
     end
 
     def created_before?(date)

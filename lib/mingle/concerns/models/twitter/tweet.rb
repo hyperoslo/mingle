@@ -2,7 +2,7 @@ module Mingle::Concerns::Models::Twitter::Tweet
   extend ActiveSupport::Concern
 
   included do
-    attachment :avatar
+    attachment :profile_picture
 
     has_many :hashtaggings, class_name: 'Mingle::Hashtagging', as: :hashtaggable,
       dependent: :destroy
@@ -15,6 +15,10 @@ module Mingle::Concerns::Models::Twitter::Tweet
 
     def author
       user_handle
+    end
+
+    def avatar
+      user_image_url
     end
 
     def url
