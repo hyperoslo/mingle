@@ -82,6 +82,7 @@ describe Mingle::Twitter::TweetsFetcher do
       expect(tweet.user_handle).to eq 'anitairenLFC'
       expect(tweet.avatar).to eq 'http://si0.twimg.com/profile_images/3521212093/20a837ff967f5f1685f00506df7550e5_normal.jpeg'
       expect(tweet.user_name).to eq 'Anita Iren Vassli'
+      expect(tweet.profile_picture).to be_a Refile::File
 
       tweet = tweets.last
 
@@ -91,6 +92,7 @@ describe Mingle::Twitter::TweetsFetcher do
       expect(tweet.user_handle).to eq 'Hbjorg'
       expect(tweet.avatar).to eq 'http://si0.twimg.com/profile_images/1364414120/Profil_twitter_normal.jpg'
       expect(tweet.user_name).to eq 'Hans Fredrik'
+      expect(tweet.profile_picture).to be_a Refile::File
 
       expect(Mingle::Twitter::Tweet.count).to be 2
     end

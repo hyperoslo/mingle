@@ -31,6 +31,7 @@ describe Mingle::Instagram::PhotosFetcher do
       expect(photo.user_id).to eq '272366028'
       expect(photo.avatar).to eq 'http://images.ak.instagram.com/profiles/profile_272366028_75sq_1365676035.jpg'
       expect(photo.user_name).to eq 'Eivind Hilling'
+      expect(photo.profile_picture).to be_a Refile::File
 
       photo = photos.last
 
@@ -43,6 +44,7 @@ describe Mingle::Instagram::PhotosFetcher do
       expect(photo.user_id).to eq '272366028'
       expect(photo.avatar).to eq 'http://images.ak.instagram.com/profiles/profile_272366028_75sq_1365676035.jpg'
       expect(photo.user_name).to eq 'Eivind Hilling'
+      expect(photo.profile_picture).to be_a Refile::File
 
       expect(Mingle::Instagram::Photo.count).to be 2
     end
