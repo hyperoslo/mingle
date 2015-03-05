@@ -28,7 +28,7 @@ module Mingle::Twitter
             user_handle: data.user.screen_name,
             # Twitter orignally only returns a small version of the profile image. 
             # by removing '_normal' at the end of the image link a large image is returned.
-            user_image_url: data.user.profile_image_url.to_s
+            user_image_url: data.user.profile_image_url.to_s,
             remote_profile_picture_url: data.user.profile_image_url.to_s.gsub(/_normal/, ''),
             user_name: data.user.name
           }
