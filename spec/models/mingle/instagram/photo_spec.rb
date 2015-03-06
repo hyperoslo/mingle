@@ -9,8 +9,7 @@ describe Mingle::Instagram::Photo do
 
   describe "#avatar" do
     it 'should be the user image url' do
-      #pending 'need to test that there is an avatar'
-      #expect(subject.avatar).to eq subject.user_image_url
+      expect(subject.avatar).to eq subject.user_image_url
     end
   end
 
