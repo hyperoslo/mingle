@@ -22,10 +22,13 @@ Gem::Specification.new do |s|
   s.add_dependency "fb_graph", "~> 2.7"
   s.add_dependency "instagram", "~> 1.0"
   s.add_dependency "google-api-client", "~> 0.7"
+  s.add_dependency "mini_magick", "~> 4.1.0"
+  s.add_dependency "refile", "~> 0.5"
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "rspec-rails"
   s.add_development_dependency "webmock"
   s.add_development_dependency "factory_girl_rails"
   s.add_development_dependency "sidekiq"
+  s.add_development_dependency "pry"
 end

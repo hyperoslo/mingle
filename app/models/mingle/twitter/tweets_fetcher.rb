@@ -27,6 +27,9 @@ module Mingle::Twitter
             user_id: data.user.id.to_s,
             user_handle: data.user.screen_name,
             user_image_url: data.user.profile_image_url.to_s,
+            # Twitter orignally only returns a small version of the profile image. 
+            # by removing '_normal' at the end of the image link a large image is returned.
+            remote_profile_picture_url: data.user.profile_image_url.to_s.gsub(/_normal/, ''),
             user_name: data.user.name
           }
           tweet.hashtags << hashtag unless tweet.hashtags.exists? hashtag

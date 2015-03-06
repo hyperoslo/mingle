@@ -6,6 +6,9 @@ require 'twitter'
 require 'fb_graph'
 require 'instagram'
 
+require 'refile/rails'
+require 'refile/image_processing'
+
 module Mingle
   class << self
     def configure
