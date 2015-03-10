@@ -4,6 +4,8 @@ module Mingle::Concerns::Models::Instagram::Photo
   included do
     attachment :profile_picture
 
+    alias_attribute :text, :message
+
     has_many :hashtaggings, class_name: 'Mingle::Hashtagging', as: :hashtaggable, dependent: :destroy
     has_many :hashtags, through: :hashtaggings
 
