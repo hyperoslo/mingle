@@ -1,5 +1,5 @@
 <h1>Tweets</h1>
 
 <% @tweets.each do |tweet| %>
-<li><%= tweet.text %> | <%= image_tag attachment_url(tweet, :profile_picture, :fill, 550, 550) %></li>
+<li><%= tweet.message %> | <%= image_tag attachment_url(tweet, :profile_picture, :fill, 550, 550) %></li>
 <% end %>
