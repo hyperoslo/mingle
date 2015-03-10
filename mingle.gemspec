@@ -25,10 +25,10 @@ Gem::Specification.new do |s|
   s.add_dependency "mini_magick", "~> 4.1.0"
   s.add_dependency "refile", "~> 0.5"
 
-  s.add_development_dependency "sqlite3"
-  s.add_development_dependency "rspec-rails"
-  s.add_development_dependency "webmock"
-  s.add_development_dependency "factory_girl_rails"
-  s.add_development_dependency "sidekiq"
-  s.add_development_dependency "pry"
+  s.add_development_dependency "sqlite3", "~> 1.3"
+  s.add_development_dependency "rspec-rails", "~> 3.0"
+  s.add_development_dependency "webmock", "~> 1.18"
+  s.add_development_dependency "factory_girl_rails", "~> 4.4"
+  s.add_development_dependency "sidekiq", "~> 3.0"
+  s.add_development_dependency "pry", "~> 0.10"
 end
