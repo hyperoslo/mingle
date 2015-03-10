@@ -13,6 +13,12 @@ describe Mingle::Instagram::Photo do
     end
   end
 
+  describe "#message" do
+    it 'should be the same as text' do
+      expect(subject.message).to eq subject.text
+    end
+  end
+
   describe "#created_before?" do
     it 'should return true' do
       photo = described_class.new(created_at: 1.day.ago)

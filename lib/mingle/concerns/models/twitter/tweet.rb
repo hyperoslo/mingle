@@ -4,6 +4,8 @@ module Mingle::Concerns::Models::Twitter::Tweet
   included do
     attachment :profile_picture
 
+    alias_attribute :message, :text
+
     has_many :hashtaggings, class_name: 'Mingle::Hashtagging', as: :hashtaggable,
       dependent: :destroy
 
