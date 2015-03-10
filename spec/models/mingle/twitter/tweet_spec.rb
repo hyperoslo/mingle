@@ -21,6 +21,12 @@ describe Mingle::Twitter::Tweet do
     end
   end
 
+  describe "#text" do
+    it 'should be the same as message' do
+      expect(subject.text).to eq subject.message
+    end
+  end
+
   describe "#created_before?" do
     it 'should return true' do
       tweet = described_class.new(created_at: 1.day.ago)
