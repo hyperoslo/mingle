@@ -1,8 +1,10 @@
+require 'net/http'
+
 module Mingle::Instagram
   class PhotosFetcher
     def initialize(hashtag)
       @hashtag = hashtag
-
+      @recent_proccesed_media = []
       Instagram.configure do |config|
         config.client_id = Mingle.config.instagram_client_id
       end
@@ -10,11 +12,23 @@ module Mingle::Instagram
 
     def fetch
       valid_photos.each {|p| p.save!}
+      verifying_integrity_for_deleted_photos
     end
 
     private
 
     attr_reader :hashtag
+
+    def verifying_integrity_for_deleted_photos
+      Photo.where.not(photo_id: @recent_proccesed_media).each{|photo|
+        uri = URI(photo.url)
+        Net::HTTP.start(uri.host, uri.port,
+          :use_ssl => uri.scheme == 'https') do |http|
+          res = http.request(Net::HTTP::Head.new(uri))
+          photo.destroy if res.code != '200'
+        end
+      }
+    end
 
     def valid_photos
       photos_for_hashtag.reject {|p| ignore? p }
@@ -28,6 +42,7 @@ module Mingle::Instagram
 
     def photos_for_hashtag
       imagedata_for_hashtag.map  do |media| 
+        @recent_proccesed_media << media.id
         Photo.find_or_initialize_by(photo_id: media.id).tap do |photo|
           photo.attributes = {
             created_at: Time.at(media.created_time.to_i),
