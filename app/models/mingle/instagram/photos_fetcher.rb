@@ -11,8 +11,9 @@ module Mingle::Instagram
     end
 
     def fetch
-      valid_photos.each {|p| p.save!}
+      result = valid_photos.each {|p| p.save!}
       verifying_integrity_for_deleted_photos
+      result
     end
 
     private
