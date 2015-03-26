@@ -81,6 +81,10 @@ The following configurations can be made through `Mingle.configure`:
 * `twitter_access_token` - A Twitter application's access token.
 * `twitter_access_token_secret` - A Twitter application's access token secret.
 * `instagram_client_id` - An Instagram application's client id.
+* `twitter_reject_words` - An array of words which will prevent a tweet from being imported.
+* `twitter_reject_users` - An array of Twitter user names whose tweets will not be imported.
+* `instagram_reject_words` - An array of words which will prevent an Instagram photo from being imported.
+* `instagram_reject_users` - An array of Instagram user names whose Instagram photos will not be imported.
 * `since` - A date before which posts, tweets and photos will be ignored.
 
 **Note:** We recommend you store your application configuration in your
