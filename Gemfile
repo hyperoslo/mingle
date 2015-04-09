@@ -6,7 +6,7 @@ source "https://rubygems.org"
 gemspec
 
 # Ruby on Rails is a full-stack web framework optimized for programmer happiness and sustainable productivity.
-gem 'rails', '4.1.0.rc1'
+gem 'rails', '4.2.1'
 
 # Declare any dependencies that are still in development here instead of in
 # your gemspec. These might include edge Rails or gems from your path or
