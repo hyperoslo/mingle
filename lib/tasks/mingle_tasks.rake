@@ -44,6 +44,11 @@ namespace :mingle do
       Mingle::Instagram::Photo.destroy_all
     end
 
+    desc "Clean up Instagram removed photos"
+    task prune: :environment do
+      Mingle::Instagram.prune
+    end
+
   end
 
 end
